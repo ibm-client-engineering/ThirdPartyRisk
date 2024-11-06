@@ -34,7 +34,7 @@ def create_standards_db() :
     metadatas = []
     for chunk in chunks :
         texts.append(chunk["content"])
-        metadatas.append({"File Name": chunk["filename"], "Heading": str(chunk["heading"]), "Subheading": str(chunk["subheading"])})
+        metadatas.append({"File Name": chunk["filename"], "Heading": str(chunk["heading"])})
     ids = [f"id{i}" for i in range(len(texts))]
     vdb.add(documents=texts, ids=ids, metadatas=metadatas)
 
