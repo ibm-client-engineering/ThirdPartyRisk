@@ -184,7 +184,7 @@ def process_question(questions, nums):
 def create_ref_sig(bs_df, batch_size=1):
     questions = bs_df["Content Library"].iloc[:, 2:4]
 
-    df = pd.DataFrame(columns=['SIG Question', 'Response', 'Standards Context', 'Issue'])
+    df = pd.DataFrame(columns=['SIG Question', 'Response', 'Standards Context'])
     num_rows, _ = questions.shape
     for increment in range(0, num_rows, batch_size) :
         end = min(increment + batch_size, num_rows)
